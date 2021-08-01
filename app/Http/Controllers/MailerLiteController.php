@@ -198,8 +198,6 @@ class MailerLiteController extends Controller
             return Redirect::to("/subscribe")->withFail($jsonResponse->error->message);
         }
         return Redirect::to("/subscribe")->withSuccess("New Subscriber Saved.");
-
-        // return redirect('/list');
     }
 
     public function checkIfExist($val){
