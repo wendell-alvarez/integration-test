@@ -317,13 +317,4 @@ class MailerLiteController extends Controller
         $resp = curl_exec($curl);
         curl_close($curl);
     }
-
-    public function cmp($a, $b,$key)
-    {   
-        return function ($a, $b) use ($key) {
-            return strnatcmp($a[$key], $b[$key]);
-        };
-
-        return strcmp($a[$key], $b[$key]);
-    }
 }
